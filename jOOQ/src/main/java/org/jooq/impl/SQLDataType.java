@@ -42,6 +42,7 @@ import java.sql.ResultSet;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.sql.Types;
+import java.util.UUID;
 
 import org.jooq.Record;
 import org.jooq.Result;
@@ -286,6 +287,11 @@ public final class SQLDataType<T> extends AbstractDataType<T> {
     // -------------------------------------------------------------------------
     // Other types
     // -------------------------------------------------------------------------
+
+    /**
+     * The {@link Types#UUID} type
+     */
+    public static final SQLDataType<UUID> UUID = new SQLDataType<UUID>(UUID.class, "uuid");
 
     /**
      * The {@link Types#OTHER} type

@@ -41,6 +41,7 @@ import java.math.BigInteger;
 import java.sql.Date;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.UUID;
 
 import org.jooq.DataType;
 import org.jooq.Record;
@@ -94,6 +95,7 @@ public class PostgresDataType<T> extends AbstractDataType<T> {
     public static final PostgresDataType<byte[]>       BYTEA                    = new PostgresDataType<byte[]>(SQLDataType.BLOB, "bytea");
     public static final PostgresDataType<YearToMonth>  INTERVALYEARTOMONTH      = new PostgresDataType<YearToMonth>(SQLDataType.INTERVALYEARTOMONTH, "interval year to month");
     public static final PostgresDataType<DayToSecond>  INTERVALDAYTOSECOND      = new PostgresDataType<DayToSecond>(SQLDataType.INTERVALDAYTOSECOND, "interval day to second");
+    public static final PostgresDataType<UUID>         UUID                     = new PostgresDataType<UUID>(SQLDataType.UUID, "uuid");
 
     // -------------------------------------------------------------------------
     // Compatibility types for supported SQLDataTypes
